@@ -1,0 +1,14 @@
+#-*-coding:utf-8-*-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+import time
+time1 = time.time()
+from PIL import Image
+import pytesseract
+
+
+image = Image.open(r'D:\Program Files\Python27\Lib\site-packages\pytesseract\test.png')
+code = pytesseract.image_to_string(image)
+print(code)
